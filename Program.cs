@@ -6,15 +6,17 @@
     }
 
     static string? userInput;
-    static readonly int secretNumber = 42;
     static bool guessValid;
     static bool success;
     static readonly int chancesAllowed = 4;
     static int chanceCount = 1;
+    static readonly Random random = new Random();
+    static readonly int secretNumber = random.Next(1, 100);
 
     static void GuessPrompt()
     {
-        Console.WriteLine($"Try to guess the secret number ({chanceCount}):");
+        int chancesRemaining = chancesAllowed - (chanceCount - 1);
+        Console.WriteLine($"Try to guess the secret number ({chancesRemaining}):");
         userInput = Console.ReadLine();
         // Console.WriteLine($"You guessed: {userGuess}");
         GameLogic(userInput);
