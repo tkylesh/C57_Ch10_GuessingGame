@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
         GuessPrompt();
     }
@@ -14,7 +14,7 @@
 
     static void GuessPrompt()
     {
-        Console.WriteLine("Try to guess the secret number:");
+        Console.WriteLine($"Try to guess the secret number ({chanceCount}):");
         userInput = Console.ReadLine();
         // Console.WriteLine($"You guessed: {userGuess}");
         GameLogic(userInput);
