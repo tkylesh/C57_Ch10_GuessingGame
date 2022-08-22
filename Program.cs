@@ -8,9 +8,9 @@
 
     // enum DifficultyLevels
     // {
-    //     Easy,
-    //     Medium,
-    //     Hard
+    //     Easy = 8,
+    //     Medium = 6,
+    //     Hard = 4
     // }
     static string? userInput;
     static string? difficultyInput;
