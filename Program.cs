@@ -39,6 +39,15 @@
                 {
                     Console.WriteLine($"Your guess is wrong! try again but this time with feeling!");
                 }
+
+                if (userGuess > secretNumber)
+                {
+                    Console.WriteLine("<<<< Your guess was too high. >>>>");
+                }
+                else
+                {
+                    Console.WriteLine("<<<< Your guess was too low. >>>>");
+                }
                 success = false;
                 while (!success && chanceCount < chancesAllowed)
                 {
