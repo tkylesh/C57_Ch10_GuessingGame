@@ -19,8 +19,7 @@
     static bool success;
     static private int chancesAllowed = 4;
     static int chanceCount = 1;
-    static readonly Random random = new Random();
-    static readonly int secretNumber = random.Next(1, 100);
+    static readonly int secretNumber = new Random().Next(1, 101);
 
     static void DifficultyPrompt()
     {
