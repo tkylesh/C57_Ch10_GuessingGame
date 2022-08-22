@@ -24,20 +24,23 @@
 
     static void DifficultyPrompt()
     {
-        Console.WriteLine($"Select Difficulty => Enter 1 for Easy, 2 for Medium, or 3 for Hard");
+        Console.WriteLine($"Select Difficulty => Enter 1 for Easy(8), 2 for Medium(6), 3 for Hard(4), 4 for cheater(no limit):");
         difficultyInput = Console.ReadLine();
 
         difficultyValid = int.TryParse(difficultyInput, out int difficultyLevel);
-        switch (difficultyLevel - 1)
+        switch (difficultyLevel)
         {
-            case 0:
+            case 1:
                 chancesAllowed = 8;
                 break;
-            case 1:
+            case 2:
                 chancesAllowed = 6;
                 break;
             case 3:
                 chancesAllowed = 4;
+                break;
+            case 4:
+                chancesAllowed = 99;
                 break;
             default:
                 break;
